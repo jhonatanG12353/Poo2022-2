@@ -1,18 +1,18 @@
 package com.jhonatan.dispensadorDeCerveza.dominio;
 
 public class Dispensador {
-    public String marca;
-    public double capacidad;
-    public double cantidadActual;
-    public double temperatura;
-    public Cerveza cervezaActual;
+    private String marca;
+    private double capacidad;
+    private double cantidadActual;
+    private double temperatura;
+    private Cerveza cervezaActual;
     public Dispensador(String marca, double capacidad) {
         this.marca = marca;
         this.capacidad = capacidad;
         this.temperatura = temperatura;
     }
 
-    public boolean servir(double cantidadAServir) {
+    public  boolean servir(double cantidadAServir) {
         if (temperaturaValida() && cantidadAServirValida(cantidadAServir)){
             this.cantidadActual -= cantidadAServir;
             return true;
@@ -20,11 +20,11 @@ public class Dispensador {
         return false;
     }
 
-    public boolean cantidadAServirValida(double cantidadAServir){
+    private boolean cantidadAServirValida(double cantidadAServir){
         return cantidadAServir > 0 && cantidadAServir <= this.cantidadActual;
     }
 
-    public boolean temperaturaValida(){
+    private boolean temperaturaValida(){
         return this.temperatura <= 10 && this.temperatura >= -10;
     }
 
@@ -39,21 +39,41 @@ public class Dispensador {
         return false;
     }
 
-    public void camviarCerveza(Cerveza nuevaCerveza){
-        this.vaciar();;
+    public  void cambiarCerveza(Cerveza nuevaCerveza){
+        this.vaciar();
         this.cervezaActual = nuevaCerveza;
+        this.temperatura = nuevaCerveza.getTempRecomendada();
         this.llenar();
     }
 
     public void llenar() {
         this.cantidadActual = this.capacidad;
-        System.out.println("El dispensador se llenó con " + this.cervezaActual.marca);
+        System.out.println("El dispensador se llenó con " + this.cervezaActual.getMarca());
     }
 
     public void vaciar() {
         this.cantidadActual = 0;
-        System.out.println("El dispensador se vació con exitosamente");
+        System.out.println("El dispensador se vació exitosamente");
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public double getCapacidad() {
+        return capacidad;
+    }
+
+    public double getCantidadActual() {
+        return cantidadActual;
+    }
+
+    public double getTemperatura() {
+        return temperatura;
+    }
+
+    public Cerveza getCervezaActual() {
+        return cervezaActual;
+    }
 
 }
