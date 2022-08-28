@@ -10,7 +10,7 @@ public class AppDispensadorCerveza {
         Cerveza duff_Original = new Cerveza("Duff","Duff_Original", -10);
          Dispensador dispensadora = new Dispensador ("black and Decker", 1000);
 
-         dispensadora.getCervezaActual().setTempRecomendada(-5);
+
 
         System.out.println("¿Desea cambiar la cerveza? si desea cambiar la cerveza por favor Digite 1, de lo contrario digite cual quier otro numero");
         Scanner cambioCerveza = new Scanner(System.in);
