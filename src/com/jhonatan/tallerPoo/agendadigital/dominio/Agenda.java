@@ -28,13 +28,34 @@ public class Agenda {
             System.out.println("se elimino el elemento persona ");
         }
     }
-    public void Buscarpersona(){//dentro del parentesis debo poner como buscar y hacer un if para que busque
+    public void BuscarpersonaNombre(String getNombre){//dentro del parentesis debo poner como buscar y hacer un if para que busque
         for (int i=0 ; i< persona.size();i++){
-            System.out.println(persona.get(i).getNombre() );
-            System.out.println(persona.get(i).getPrimerApellido());
-            System.out.println(persona.get(i).getSegundoApellido());
-            System.out.println(persona.get(i).getNumero());
-
+            if(getNombre == persona.get(i).getNombre()  ) {
+                System.out.println(persona.get(i).getNombre());
+                System.out.println(persona.get(i).getPrimerApellido());
+                System.out.println(persona.get(i).getSegundoApellido());
+                System.out.println(persona.get(i).getNumero());
+            }
+        }
+    }
+    public void BuscarpersonaApellido(String getPrimerApellido){//dentro del parentesis debo poner como buscar y hacer un if para que busque
+        for (int i=0 ; i< persona.size();i++){
+            if(getPrimerApellido == persona.get(i).getPrimerApellido()  ) {
+                System.out.println(persona.get(i).getNombre());
+                System.out.println(persona.get(i).getPrimerApellido());
+                System.out.println(persona.get(i).getSegundoApellido());
+                System.out.println(persona.get(i).getNumero());
+            }
+        }
+    }
+    public void Buscarpersonanumero(int getNumero){//dentro del parentesis debo poner como buscar y hacer un if para que busque
+        for (int i=0 ; i< persona.size();i++){
+            if(getNumero == persona.get(i).getNumero()  ) {
+                System.out.println(persona.get(i).getNombre());
+                System.out.println(persona.get(i).getPrimerApellido());
+                System.out.println(persona.get(i).getSegundoApellido());
+                System.out.println(persona.get(i).getNumero());
+            }
         }
     }
 }

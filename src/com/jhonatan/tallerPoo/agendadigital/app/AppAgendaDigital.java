@@ -8,8 +8,7 @@ public class AppAgendaDigital {
         agenda. insertarPersona("Juan","Gomez","Obando",12313543);
         agenda. insertarPersona("emily","Gomez","Obando",12313543);
         agenda. verAgenda();
-        agenda.eliminarPersona();
-        agenda.eliminarPersona();
+        agenda. BuscarpersonaNombre("juan");
         agenda. verAgenda();
 
     }
