@@ -1,16 +1,17 @@
 package com.jhonatan.tallerPoo.agendadigital.dominio;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Agenda {
     private ArrayList<Persona> persona;
-
+    private static  final  int LIMITE_AGENDA = 50;
     public Agenda() {
-        persona = new ArrayList<>(50);
+       this.persona = new ArrayList<>(50);
     }
 
     public void insertarPersona (String nombre ,String primerApellido, String segundoApellido , int numero) {
-        Persona nuevo =new Persona (nombre, primerApellido,segundoApellido,numero);
+        Persona nuevo = new Persona (nombre, primerApellido,segundoApellido,numero);
         persona.add(nuevo);
     }
     public void verAgenda(){
@@ -22,10 +23,10 @@ public class Agenda {
             System.out.println(persona.get(i).getNumero());
         }
     }
-    public void eliminarPersona(){
-        for (int i=0 ; i< persona.size();i++){
-            persona.remove(i);
-            System.out.println("se elimino el elemento persona ");
+    public void eliminarPersona(int telefono){
+        Persona contactoAEliminar = this.BuscarPersonaNumero(telefono);
+        if (contactoAEliminar != null) {
+            this.persona.remove(contactoAEliminar);
         }
     }
     public void BuscarpersonaNombre(String getNombre){//dentro del parentesis debo poner como buscar y hacer un if para que busque
@@ -48,16 +49,28 @@ public class Agenda {
             }
         }
     }
-    public void Buscarpersonanumero(int getNumero){//dentro del parentesis debo poner como buscar y hacer un if para que busque
-        for (int i=0 ; i< persona.size();i++){
-            if(getNumero == persona.get(i).getNumero()  ) {
-                System.out.println(persona.get(i).getNombre());
-                System.out.println(persona.get(i).getPrimerApellido());
-                System.out.println(persona.get(i).getSegundoApellido());
-                System.out.println(persona.get(i).getNumero());
+    public Persona BuscarPersonaNumero(int numeroABuscar){//dentro del parentesis debo poner como buscar y hacer un if para que busque
+        Persona contactoBuscado = null;
+        for (Persona contacto : this.persona) {
+            if (contacto.getNumero() == numeroABuscar) {
+                contactoBuscado = contacto;
             }
         }
+        return contactoBuscado;
     }
+    public Persona cambiarNumero(long numero, long numeroNuevo) {
+    return null;
+    }
+
+    public List<Persona> ordenar() {
+
+
+
+        return null;
+    }
+    
 }
+
+
 
 

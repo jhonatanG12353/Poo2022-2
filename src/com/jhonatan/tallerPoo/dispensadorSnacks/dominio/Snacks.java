@@ -1,19 +1,20 @@
-package com.jhonatan.tallerPoo.dispensadorSnakcs.dominio;
+package com.jhonatan.tallerPoo.dispensadorSnacks.dominio;
 
 public class Snacks {
-    private int codigo;
+    private long codigo;
     private int cantidadActualSnacks;
     private double precio;
     private String snacks;
+    private String marca;
 
-    public Snacks(int codigo, int cantidadActualSnacks, double precio, String snacks) {
+    public Snacks(long codigo, String snacks,  double precio, String marca) {
         this.codigo = codigo;
-        this.cantidadActualSnacks = cantidadActualSnacks;
         this.precio = precio;
         this.snacks = snacks;
+        this.marca = marca;
     }
 
-    public int getCodigo() {
+    public long  getCodigo() {
         return codigo;
     }
 
@@ -21,13 +22,7 @@ public class Snacks {
         this.codigo = codigo;
     }
 
-    public int getCantidadActualSnacks() {
-        return cantidadActualSnacks;
-    }
 
-    public void setCantidadActualSnacks(int cantidadActualSnacks) {
-        this.cantidadActualSnacks = cantidadActualSnacks;
-    }
 
     public double getPrecio() {
         return precio;
@@ -44,4 +39,22 @@ public class Snacks {
     public void setSnacks(String snacks) {
         this.snacks = snacks;
     }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getCantidadActualSnacks() {
+        return cantidadActualSnacks;
+    }
+
+    public void setCantidadActualSnacks(int cantidadActualSnacks) {
+        this.cantidadActualSnacks = cantidadActualSnacks;
+    }
 }
+
+
