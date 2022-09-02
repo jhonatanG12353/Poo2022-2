@@ -15,9 +15,9 @@ public class DispensadorSnacks {
     }
 
     public void agregarUnSnacks (int codigo, String snacks , double precio, String marca) {
-        Snacks snackAgregar = new Snacks (codigo,snacks,precio,marca);
+        Snacks agregarSnacks = new Snacks (codigo,snacks,precio,marca);
         if ((this.snacks.size() + 1) <= LIMITE_SNACKS){
-            this.snacks.add(snackAgregar);
+            this.snacks.add(agregarSnacks);
         } else {
             System.out.println("No se pueden agregar mas snacks, la maquina ya esta llena para este snacks");
         }

@@ -1,9 +1,14 @@
 package com.jhonatan.tallerPoo.dispensadorSnacks.app;
 
-public class DispensadorSnacks {
+
+import com.jhonatan.tallerPoo.dispensadorSnacks.dominio.DispensadorSnacks;
+
+public class AppDispensadorSnacks {
     public static void main(String[] args) {
 
         DispensadorSnacks snacks = new DispensadorSnacks ();
+
+
 
     }
 
