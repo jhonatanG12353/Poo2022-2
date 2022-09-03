@@ -59,28 +59,25 @@ public class DispensadorSnacks {
         }
     }
     public void aumentarSnack(long codigo, int cantidadAAumentar) {
+
         Snacks snackAumentado = buscarSnackPorCodigo(codigo);
-        if ((snackAumentado != null)&&(snackAumentado.getCantidadActualSnacks()<6)){
+        if ((snackAumentado != null)&&(snackAumentado.getCantidadActualSnacks()<13)){
             this.cantidadActual = snackAumentado.getCantidadActualSnacks() + cantidadAAumentar;
-            if (this.cantidadActual <= 6) {
+            if (this.cantidadActual <= 12) {
                 snackAumentado.setCantidadActualSnacks(this.cantidadActual);
-                System.out.println("El snack "+snackAumentado.getSnacks() + "ha sido abastecido en "
-                        + cantidadAAumentar + " unidades");
             }
             else {
-                System.out.println("No se ha abastecido, ha excedido la cantidad permitida.");
+                System.out.println("se ha excedido en la cantidad");
             }
         } else {
-            System.out.println("No se ha abastecido, el snack no existe.");
+            System.out.println("Digite cantidad correcta");
         }
     }
     public void quitarSnack(long codigo) {
         Snacks snackAQuitar = buscarSnackPorCodigo(codigo);
         if (snackAQuitar != null) {
             this.snacks.remove(snackAQuitar);
-            System.out.println("Se ha quitado el snack " + snackAQuitar.getSnacks());
-        } else {
-            System.out.println("No se ha quitado, el snack no existe.");
+            System.out.println(snackAQuitar.getSnacks());
         }
     }
     public Snacks cantidadSnack(long codigo) {
