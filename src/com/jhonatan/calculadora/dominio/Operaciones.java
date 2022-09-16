@@ -17,7 +17,7 @@ public class Operaciones {
         System.out.println("el resultado de la suma es: "+ resultado);
     }
     public void suma (int num1){ //sobre carga
-        resultado= num1 + NUMERO_SOBRECARGA;
+        resultado = num1 + NUMERO_SOBRECARGA;
         System.out.println("el resultado de la suma es: "+ resultado);
     }
     public void resta (int num1,int num2){
