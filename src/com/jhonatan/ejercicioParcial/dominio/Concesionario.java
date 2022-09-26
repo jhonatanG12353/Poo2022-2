@@ -16,7 +16,7 @@ public class Concesionario {
     }
 
     private boolean ingresarMoto(long serial, String marca, int precio, int cilindraje ){
-        if (insertarMotoCorrectamente() == true && CapacidadActual <= CAPACIDAD_TOTAL){
+        if (insertarMotoCorrectamente(1) == true && CapacidadActual <= CAPACIDAD_TOTAL){
             Moto motos = new Moto (serial, marca,precio,cilindraje);
             moto.add(motos);
             return true;
@@ -24,7 +24,7 @@ public class Concesionario {
         return false;
     }
     private boolean insertarMotoCorrectamente (long serial){
-        if (buscarSerial()==false){
+        if (buscarSerial(1)==false){
             return true;
         }
         return false;
@@ -51,16 +51,7 @@ public class Concesionario {
         }
 
     }
-    public boolean buscarSoloNuevas (){
 
-        return list<Moto>;
-    }
-    public int buscarCilindraje (int num1,int num2){
-        return list<Moto>;
-    }
-    public void vender (moto){
-
-    }
 
     public int getCapacidadActual() {
         return CapacidadActual;
