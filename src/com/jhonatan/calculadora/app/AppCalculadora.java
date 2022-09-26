@@ -1,12 +1,12 @@
 package com.jhonatan.calculadora.app;
 
-import com.jhonatan.calculadora.dominio.Operaciones;
+import com.jhonatan.calculadora.dominio.Operacion;
 
 import javax.swing.*;
 
 public class AppCalculadora {
     public static void main(String[] args){
-        Operaciones op = new Operaciones();
+        Operacion op = new Operacion();
         double num1,num2;
         int opcion=5;
 
@@ -18,21 +18,25 @@ public class AppCalculadora {
                         num1 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
                         num2 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
                         op.suma(num1, num2);
+                        JOptionPane.showMessageDialog(null, " El Resutaldo de la suma es: "+op.suma(num1,num2));
                         break;
                     case 2:
                         num1 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
                         num2 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
                         op.resta(num1, num2);
+                        JOptionPane.showMessageDialog(null, " El Resutaldo de la Resta es: "+op.resta(num1,num2));
                         break;
                     case 3:
                         num1 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
                         num2 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
                         op.multiplicacion(num1, num2);
+                        JOptionPane.showMessageDialog(null, " El Resutaldo de la Multiplicacion es: " + op.multiplicacion(num1,num2));
                         break;
                     case 4:
                         num1 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
                         num2 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
                         op.division(num1, num2);
+                        JOptionPane.showMessageDialog(null, " El Resutaldo de la Division es: "+op.division(num1,num2));
                         break;
                     case 5:
                         JOptionPane.showMessageDialog(null, " Usted a salido de la Calculadora \n Gracias");
