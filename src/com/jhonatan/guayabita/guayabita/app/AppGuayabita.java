@@ -24,9 +24,16 @@ public class AppGuayabita {
                      if (jugadores.getJugador1() == null){
                          String nombreJugador;
                          nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 1.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
+                         jugadores.setJugador1(nombreJugador);
                      }
+                    if (jugadores.getJugador2() == null){
+                        String nombreJugador;
+                        nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 2.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
+                        jugadores.setJugador2(nombreJugador);
+                    }
                     break;
                 case INSTRUCCIONES:
+                    JOptionPane.showMessageDialog(null,"instrucciones guayabita","Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
                     break;
                 case PUNTAJE:
                     break;
