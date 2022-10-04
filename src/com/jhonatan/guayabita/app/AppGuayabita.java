@@ -1,8 +1,8 @@
 package com.jhonatan.guayabita.app;
 
+import com.jhonatan.guayabita.dominio.Dado;
 import com.jhonatan.guayabita.dominio.Guayabita;
 import com.jhonatan.guayabita.dominio.Jugadores;
-import com.jhonatan.guayabita.dominio.Dado;
 
 import javax.swing.*;
 import java.util.Arrays;
@@ -15,7 +15,6 @@ public class AppGuayabita {
     private static final ImageIcon DADO4 = new ImageIcon(AppGuayabita.class.getResource("dado4.png"));
     private static final ImageIcon DADO5 = new ImageIcon(AppGuayabita.class.getResource("dado5.png"));
     private static final ImageIcon DADO6 = new ImageIcon(AppGuayabita.class.getResource("dado6.png"));
-
     private static final int JUGAR = 0;
     private static final int PUNTAJE = 2;
     private static final int INSTRUCCIONES = 1;
@@ -33,36 +32,36 @@ public class AppGuayabita {
 
             switch(opcion){
                 case JUGAR:
-                     if (jugadores.getJugador1() == null){
-                         String nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 1.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
-                         jugadores.setJugador1(nombreJugador);
-                         double dinerJugador1 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
-                         jugadores.setDineroJugador1(dinerJugador1);
-                     }
-                    if (jugadores.getJugador2() == null){
-                        String nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 2.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
-                        jugadores.setJugador2(nombreJugador);
-                        double dinerJugador2 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
-                        jugadores.setDineroJugador2(dinerJugador2);
-                    }
-                    JOptionPane.showMessageDialog(null,"INICIO DEL JUEGO  APUESTA MINIMA 500$ \n\n  APUESTA JUGADOR 1.","Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
-                    if (jugadores.getJugador1() != null){
-                        double valorApuesta= Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
-                        guayabita.setValorApostar1(valorApuesta);
-                        if(guayabita.apuestaCorrecta(jugadores.getDineroJugador1(), guayabita.getValorApostar1())==true){
-                            guayabita.poteApuestas(valorApuesta);
+                         if (jugadores.getJugador1() == null){
+                             String nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 1.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
+                             jugadores.setJugador1(nombreJugador);
+                             double dinerJugador1 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
+                             jugadores.setDineroJugador1(dinerJugador1);
+                         }
+                        if (jugadores.getJugador2() == null){
+                            String nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 2.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
+                            jugadores.setJugador2(nombreJugador);
+                            double dinerJugador2 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
+                            jugadores.setDineroJugador2(dinerJugador2);
                         }
+                        JOptionPane.showMessageDialog(null,"INICIO DEL JUEGO  APUESTA MINIMA 500$ \n\n  APUESTA JUGADOR 1.","Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
+                        if (jugadores.getJugador1() != null){
+                            double valorApuesta= Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
+                            guayabita.setValorApostar1(valorApuesta);
+                            if(guayabita.apuestaCorrecta(jugadores.getDineroJugador1(), guayabita.getValorApostar1())==true){
+                                guayabita.poteApuestas(valorApuesta);
+                            }
 
-                    }
-                    JOptionPane.showMessageDialog(null,"INICIO DEL JUEGO  APUESTA MINIMA 500$  \n\n  APUESTA JUGADOR 2.","Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
-                    if (jugadores.getJugador2() != null){
-                        double valorApuesta= Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 2.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
-                        guayabita.setValorApostar2(valorApuesta);
-                        guayabita.apuestaCorrecta(jugadores.getDineroJugador2(), guayabita.getValorApostar2());
-                        if(guayabita.apuestaCorrecta(jugadores.getDineroJugador1(), guayabita.getValorApostar1())==true){
-                            guayabita.poteApuestas(valorApuesta);
                         }
-                    }
+                        JOptionPane.showMessageDialog(null,"INICIO DEL JUEGO  APUESTA MINIMA 500$  \n\n  APUESTA JUGADOR 2.","Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
+                        if (jugadores.getJugador2() != null){
+                            double valorApuesta= Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 2.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
+                            guayabita.setValorApostar2(valorApuesta);
+                            guayabita.apuestaCorrecta(jugadores.getDineroJugador2(), guayabita.getValorApostar2());
+                            if(guayabita.apuestaCorrecta(jugadores.getDineroJugador1(), guayabita.getValorApostar1())==true){
+                                guayabita.poteApuestas(valorApuesta);
+                            }
+                        }
 
 
                     break;

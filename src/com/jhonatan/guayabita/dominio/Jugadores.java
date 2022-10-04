@@ -9,30 +9,6 @@ public class Jugadores {
     private int ganadasJugador2;
     private int empate;
 
-    public int getGanadasjugador1() {
-        return ganadasjugador1;
-    }
-
-    public void setGanadasjugador1(int ganadasjugador1) {
-        this.ganadasjugador1 = ganadasjugador1;
-    }
-
-    public int getGanadasJugador2() {
-        return ganadasJugador2;
-    }
-
-    public void setGanadasJugador2(int ganadasJugador2) {
-        this.ganadasJugador2 = ganadasJugador2;
-    }
-
-    public int getEmpate() {
-        return empate;
-    }
-
-    public void setEmpate(int empate) {
-        this.empate = empate;
-    }
-
     public String getJugador1() {
         return jugador1;
     }
@@ -63,5 +39,29 @@ public class Jugadores {
 
     public void setDineroJugador2(double dineroJugador2) {
         this.dineroJugador2 = dineroJugador2;
+    }
+
+    public int getGanadasjugador1() {
+        return ganadasjugador1;
+    }
+
+    public void setGanadasjugador1(int ganadasjugador1) {
+        this.ganadasjugador1 = ganadasjugador1;
+    }
+
+    public int getGanadasJugador2() {
+        return ganadasJugador2;
+    }
+
+    public void setGanadasJugador2(int ganadasJugador2) {
+        this.ganadasJugador2 = ganadasJugador2;
+    }
+
+    public int getEmpate() {
+        return empate;
+    }
+
+    public void setEmpate(int empate) {
+        this.empate = empate;
     }
 }

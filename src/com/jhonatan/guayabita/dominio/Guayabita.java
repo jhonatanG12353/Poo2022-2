@@ -1,7 +1,8 @@
 package com.jhonatan.guayabita.dominio;
 
 public class Guayabita {
-    Jugadores jugadores = new Jugadores();
+
+
     public static final int APUESTA_MINIMA=500;
     private double valorApostar1;
     private double valorApostar2;
