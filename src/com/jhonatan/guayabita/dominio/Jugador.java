@@ -7,9 +7,6 @@ import javax.swing.*;
 public class Jugador extends AppGuayabita {
     private String nameJugador;
     private int poteJugador;
-
-
-    //valida que si sea un numero
     public static boolean EsNumero(String cadena){
         try {
             Integer.parseInt(cadena);
@@ -18,26 +15,18 @@ public class Jugador extends AppGuayabita {
             return false;
         }
     }
-    //crea el jugador
     public String crearJugador() {
-
         do {
             this.nameJugador = (String) JOptionPane.showInputDialog(null, "Ingrese el nombre del jugador" ,
                     "Nombre", JOptionPane.WARNING_MESSAGE,ICONO,
                     null, null);
 
         }while((this.nameJugador ==null) || this.nameJugador.trim().isEmpty());
-
-
         return this.nameJugador;
     }
-
-
-    //crea el pote
     public int crearPote()
     {
         String convertPote;
-
         do {
             convertPote = (String) (JOptionPane.showInputDialog(null, "Ingrese el pote de " +this.nameJugador, "Nombre",
                     JOptionPane.WARNING_MESSAGE, ICONO, null,
@@ -48,30 +37,21 @@ public class Jugador extends AppGuayabita {
 
                 }
             }
-
         }while(this.poteJugador <=100);
-
-
-
         return this.poteJugador;
-
     }
 
     public String getNameJugador() {
         return nameJugador;
     }
-
     public void setNameJugador(String nameJugador) {
         this.nameJugador = nameJugador;
     }
-
     public int getPoteJugador() {
         return poteJugador;
     }
-
     public void setPoteJugador(int poteJugador) {
         this.poteJugador = poteJugador;
     }
-
 
 }
