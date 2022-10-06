@@ -17,8 +17,7 @@ public class AppGuayabita {
 
         Guayabita jugar = new Guayabita();
         jugar.menu();
-
-
+        
 
     }
 }

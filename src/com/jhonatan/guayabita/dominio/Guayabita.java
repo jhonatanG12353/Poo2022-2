@@ -53,28 +53,11 @@ public class Guayabita extends AppGuayabita {
 
             else if (opcion == 1) {
 
-                JOptionPane.showMessageDialog(null,
-                        "---------Instruciones---------\n El juego de la guayabita\n\"S� el jugador saca 1 o 6 entonces pierde la posibilidad de apostar y por ende\\n\"\r\n"
-                                + "													+\"cede el turno al otro jugador.\\n\\n\"\r\n"
-                                + "													+ \"S� por el contrario saca un n�mero del 2 al 5 tiene la posibilidad de apostar por\\n\"\r\n"
-                                + "													+\"el pote que hay en juego. Si elige que no quiere apostar cede su turno, pero s�\\n\"\r\n"
-                                + "													+\"quiere hacerlo el juego le debe permitir ingresar el monto por el que desea\\n\"\r\n"
-                                + "													+\"apostar y luego tirar nuevamente el dado.\\n\\n\"\r\n"
-                                + "													+\"El jugador puede apostar por la totalidad del pote o por una parte (por ejemplo,\\n\"\r\n"
-                                + "													+\"si el pote es de $1200 el jugador puede apostar $1200 o un valor inferior). Se\\n\"\r\n"
-                                + "													+\"debe controlar que el jugador si cuente con el valor de la apuesta que desea\\n\"\r\n"
-                                + "													+\"realizar.\\n\\n\"\r\n"
-                                + "													+\"S� el jugador saca un n�mero mayor al que sac� en la tirada anterior entonces\\n\"\r\n"
-                                + "													+\"se lleva el dinero del pote (la parte que apost�). Si por el contrario el jugador\\n\"\r\n"
-                                + "													+\"saca un n�mero igual o inferior entonces tendr� que entregar lo que apost� al\\n\"\r\n"
-                                + "													+\"pote y as� este ir� aumentando.\\n\\n\"\r\n"
-                                + "													+\"S� despu�s de una jugada el pote queda en $0, el juego vuelve a comenzar con\\n\"\r\n"
-                                + "													+\"$200 (Ambos jugadores aportan de a $100).\\n\\n\"\r\n"
-                                + "													+\"Despu�s de esto al otro jugador se le pregunta si desea lanzar el dado y\\n\"\r\n"
-                                + "													+\"comienza su flujo nuevamente.\\n\\n\"\r\n"
-                                + "													+\"El juego termina cuando uno de los dos jugadores no tenga dinero suficiente\\n\"\r\n"
-                                + "													+\"para iniciar una ronda.\";\r\n"
-                                + "");
+                JOptionPane.showMessageDialog(null,"INSTRUCCIONES\n\n Cada jugador debe colocar el valor del case en la mesa.\n"
+                        + "Se efectuaran turnos, en los que el jugador lanza el dado,\n"
+                        + "segun el resultado se pueden dar las siguientes posibilidades.\n"
+                        + "Al sacar 1 o 6, pierde, y debe colocar el valor del case en la mesa, cambio de turno.\n"
+                        + "Al sacar 2,3,4,5 posee un segundo turno.");
                 menu();
             }
         } while (opcion == -1);
