@@ -1,10 +1,5 @@
 package com.jhonatan.guayabita.dominio;
-
-import com.jhonatan.guayabita.AppGuayabita.AppGuayabita;
-
-import javax.swing.*;
-
-public class Jugador extends AppGuayabita {
+public class Jugador  {
     private String nameJugador;
     private int poteJugador;
     public static boolean EsNumero(String cadena){
@@ -15,29 +10,24 @@ public class Jugador extends AppGuayabita {
             return false;
         }
     }
-    public String crearJugador() {
+    public String crearJugador(String nombre) {
         do {
-            this.nameJugador = (String) JOptionPane.showInputDialog(null, "Ingrese el nombre del jugador" ,
-                    "Nombre", JOptionPane.WARNING_MESSAGE,ICONO,
-                    null, null);
-
+            this.nameJugador = nombre;
         }while((this.nameJugador ==null) || this.nameJugador.trim().isEmpty());
         return this.nameJugador;
     }
-    public int crearPote()
+    public int crearPote(String pote)
     {
         String convertPote;
         do {
-            convertPote = (String) (JOptionPane.showInputDialog(null, "Ingrese el pote de " +this.nameJugador, "Nombre",
-                    JOptionPane.WARNING_MESSAGE, ICONO, null,
-                    null));
+            convertPote = pote;
             {
                 if (Jugador.EsNumero(convertPote)) {
                     this.poteJugador = Integer.parseInt(convertPote);
 
                 }
             }
-        }while(this.poteJugador <=100);
+        }while(this.poteJugador <=250);
         return this.poteJugador;
     }
 
