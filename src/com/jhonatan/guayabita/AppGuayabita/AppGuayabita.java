@@ -13,7 +13,7 @@ public class AppGuayabita  {
     protected static final ImageIcon DADO4 = new ImageIcon(AppGuayabita.class.getResource("cuatro.png"));
     protected static final ImageIcon DADO5 = new ImageIcon(AppGuayabita.class.getResource("cinco.png"));
     protected static final ImageIcon DADO6 = new ImageIcon(AppGuayabita.class.getResource("seis.png"));
-    protected static final ImageIcon DINERO = new ImageIcon(AppGuayabita.class.getResource("dinero.png"));
+    protected static final ImageIcon DINERO = new ImageIcon(AppGuayabita.class.getResource("dinero1.png"));
 
 
     private int pote;
@@ -39,7 +39,7 @@ public class AppGuayabita  {
 
         do {
             opcion = JOptionPane.showOptionDialog(null,
-                    "---Bienvenido al juego de la Guayabita---" + "\n" + "�Que deseas hacer?", "guayabita",
+                    "---Bienvenido al juego de la Guayabita---" + "\n" + "Que deseas hacer?", "guayabita",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
                    ICONO, new String[] { "Jugar", "Ver Instruciones" },
                     null);
@@ -82,9 +82,6 @@ public class AppGuayabita  {
 
     }
     public void juego() {
-
-
-
         this.pote = 500;
 
         jugadores.get(0).setPoteJugador(jugadores.get(0).getPoteJugador() - 250);
@@ -96,8 +93,6 @@ public class AppGuayabita  {
 
     public int lanzar() {
         int apuesta = 0;
-
-
         int opcion = 0;
         if (this.turno % 2 == 0) {
 
@@ -220,7 +215,6 @@ public class AppGuayabita  {
             azar = this.dado;
             this.dado = (int) (Math.random() * 6) + 1;
             if (this.dado < azar && restar != 0) {
-
                 if (this.dado == 1) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()

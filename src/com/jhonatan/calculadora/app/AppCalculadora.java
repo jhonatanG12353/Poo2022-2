@@ -15,8 +15,8 @@ public class AppCalculadora {
                         "\n (2) Resta . \n (3) Multiplicacion. \n (4) Division  \n (5) si quieres salir "));
                 switch (opciones) {
                     case 1:
-                        num1 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
-                        num2 = Integer.parseInt(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
+                        num1 = Double.parseDouble(JOptionPane.showInputDialog(null, " Ingrese el numero 1 de la operacion"));
+                        num2 = Double.parseDouble(JOptionPane.showInputDialog(null, " Ingrese el numero 2 de la operacion"));
                         op.suma(num1, num2);
                         JOptionPane.showMessageDialog(null, " El Resutaldo de la suma es: "+op.suma(num1,num2));
                         break;
