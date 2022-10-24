@@ -13,4 +13,9 @@ public class Freelance extends Empleado {
     protected long calcularSalario() {
         return (valorHora * horasTrabajadas);
     }
+
+    public String getnombre() {
+        return getnombre();
+    }
+
 }

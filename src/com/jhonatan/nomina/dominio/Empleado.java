@@ -7,4 +7,8 @@ public abstract class Empleado  {
         this.nombre = nombre;
     }
     protected abstract long calcularSalario();
+
+    public String getNombre() {
+        return nombre;
+    }
 }
