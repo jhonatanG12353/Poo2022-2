@@ -4,28 +4,43 @@ import java.util.ArrayList;
 
 public class Nomina {
     private ArrayList<Empleado> empleados = new ArrayList<>();
-    public ArrayList<Empleado> empleadosDirectos = new ArrayList<>();
-    public ArrayList<Empleado> empleadosFreeLancer = new ArrayList<>();
-    public ArrayList<Empleado> empleadosPromotores = new ArrayList<>();
     private long nomina;
 
     public void calcularNomina(){
         for (Empleado emp : empleados) {
             System.out.println("El salario de "+emp.getNombre()+" es de " +emp.calcularSalario());
+            nomina +=emp.calcularSalario();
         }
-
+        System.out.println("La nomina de todos los trabajadores es: "+nomina);
+        System.out.println("-------------------------------------------------------");
+        listarPromotores(empleados);
+        listarDirectos(empleados);
+        listarFreeLancers(empleados);
+        System.out.println("-------------------------------------------------------");
     }
-    public void listarDirectos(Empleado empleado){
+    public void agregarusuario(Empleado empleado){
         empleados.add(empleado);
-        empleadosDirectos.add(empleado);
     }
-    public void listarFreeLancers(Empleado empleado){
-        empleados.add(empleado);
-        empleadosFreeLancer.add(empleado);
+    public void listarDirectos(ArrayList<Empleado> empleado){
+        for (Empleado emp : empleados){
+            if(emp instanceof Directo){
+                System.out.println("El empleado "+emp.getNombre()+" es directo.");
+            }
+        }
     }
-    public void listarPromotores(Empleado empleado){
-        empleados.add(empleado);
-        empleadosPromotores.add(empleado);
+    public void listarFreeLancers(ArrayList<Empleado> empleado){
+        for (Empleado emp : empleados){
+            if(emp instanceof Freelance){
+                System.out.println("El empleado "+emp.getNombre()+" es Freelancers.");
+            }
+        }
+    }
+    public void listarPromotores(ArrayList<Empleado> empleado){
+        for (Empleado emp : empleados){
+            if(emp instanceof Promotor){
+                System.out.println("El empleado "+emp.getNombre()+" es Promotor.");
+            }
+        }
     }
 
 }

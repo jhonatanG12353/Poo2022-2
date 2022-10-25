@@ -23,7 +23,7 @@ public class Vendedor extends Directo{
         }
     }
     protected long calcularSalario() {
-        return (salario-calcularAporte()+calcularcomision());
+        return (super.calcularSalario() + calcularcomision());
     }
 
 }
